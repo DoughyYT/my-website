@@ -2,25 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Video Site</title>
+  <title>DoughyMC Video Site</title>
   <style>
     body {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
-      background: black;
+      background: linear-gradient(135deg, #ffffff, #007bff); /* white + blue gradient */
     }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    header img {
+      height: 60px; /* adjust logo size */
+    }
+
+    header h1 {
+      font-size: 3em;
+      color: magenta;
+      -webkit-text-stroke: 2px white; /* white stroke */
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
     video {
       max-width: 90%;
-      max-height: 90%;
+      max-height: 70%;
       border: 3px solid white;
       border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
     }
   </style>
 </head>
 <body>
+  <header>
+    <img src="Serverpicture.jpg" alt="DoughyMC Logo"> <!-- replace logo.png with your logo file -->
+    <h1>DoughyMC</h1>
+  </header>
+
   <video controls autoplay>
     <source src="oh yeah ethan.mp4" type="video/mp4">
     Your browser does not support the video tag.
