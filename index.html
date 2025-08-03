@@ -7,12 +7,11 @@
     body {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      height: 100vh;
       margin: 0;
-      background: linear-gradient(135deg, #ffffff, #007bff); /* white + blue gradient */
+      background: linear-gradient(135deg, #ffffff, #007bff);
       font-family: Arial, Helvetica, sans-serif;
+      color: white;
     }
 
     header {
@@ -27,18 +26,17 @@
     }
 
     header img {
-      height: 90px; /* logo bigger */
+      height: 90px;
     }
 
     header h1 {
-      font-size: 4em; /* bigger text */
+      font-size: 4em;
       color: magenta;
-      -webkit-text-stroke: 2px white; /* white stroke */
+      -webkit-text-stroke: 2px white;
       margin: 0;
       font-weight: bold;
     }
 
-    /* Social bar in top right */
     .social {
       position: absolute;
       right: 30px;
@@ -57,7 +55,6 @@
       transform: scale(1.15);
     }
 
-    /* Specific colors */
     .youtube svg { fill: red; }
     .discord svg { fill: #5865F2; }
     .twitch svg { fill: #9146FF; }
@@ -69,36 +66,82 @@
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0,0,0,0.5);
     }
+
+    /* Section below video */
+    .server-info {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .server-info h2 {
+      font-size: 3em;
+      color: magenta;
+      -webkit-text-stroke: 2px white;
+      margin: 10px 0;
+      display: inline-block;
+    }
+
+    .server-ip {
+      font-size: 2.5em;
+      color: limegreen;
+      -webkit-text-stroke: 2px white;
+      margin-left: 20px;
+      font-family: "Minecraftia", monospace; /* fallback */
+    }
+
+    .server-banner {
+      margin-top: 20px;
+    }
+
+    .server-banner img {
+      max-width: 90%;
+      border: 4px solid white;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    }
+
+    .mods-section {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .mods-section h2 {
+      font-size: 3em;
+      color: red;
+      -webkit-text-stroke: 2px white;
+      margin-bottom: 15px;
+    }
+
+    .mods-section a {
+      display: block;
+      font-size: 1.5em;
+      color: yellow;
+      text-decoration: none;
+      margin: 10px 0;
+    }
+
+    .mods-section a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <header>
-    <img src="Serverpicture.jpg" alt="DoughyMC Logo"> <!-- replace logo.png with your actual logo -->
+    <img src="Serverpicture.jpg" alt="DoughyMC Logo">
     <h1>DoughyMC</h1>
 
-    <!-- Social Links -->
     <div class="social">
       <!-- YouTube -->
       <a href="https://www.youtube.com/@DoughyOfficial" target="_blank" class="youtube" aria-label="YouTube">
-        <svg viewBox="0 0 24 24">
-          <path d="M23.498 6.186a2.998 2.998 0 0 0-2.113-2.121C19.53 3.5 12 3.5 12 3.5s-7.53 0-9.385.565a2.998 2.998 0 0 0-2.113 2.121A31.615 31.615 0 0 0 .5 12a31.615 31.615 0 0 0 .002 5.814 2.998 2.998 0 0 0 2.113 2.121C4.47 20.5 12 20.5 12 20.5s7.53 0 9.385-.565a2.998 2.998 0 0 0 2.113-2.121A31.615 31.615 0 0 0 23.5 12a31.615 31.615 0 0 0-.002-5.814zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/>
-        </svg>
+        <svg viewBox="0 0 24 24"><path d="M23.498 6.186a2.998 2.998 0 0 0-2.113-2.121C19.53 3.5 12 3.5 12 3.5s-7.53 0-9.385.565a2.998 2.998 0 0 0-2.113 2.121A31.615 31.615 0 0 0 .5 12a31.615 31.615 0 0 0 .002 5.814 2.998 2.998 0 0 0 2.113 2.121C4.47 20.5 12 20.5 12 20.5s7.53 0 9.385-.565a2.998 2.998 0 0 0 2.113-2.121A31.615 31.615 0 0 0 23.5 12a31.615 31.615 0 0 0-.002-5.814zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
       </a>
-
       <!-- Discord -->
       <a href="https://discord.gg/uB5tyQRd5p" target="_blank" class="discord" aria-label="Discord">
-        <svg viewBox="0 0 245 240">
-          <path d="M104.4 104.3c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1.1-6.1-4.5-11.1-10.2-11.1zm36.2 0c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1s-4.5-11.1-10.2-11.1z"/>
-          <path d="M189.5 20h-134C24.6 20 10 34.6 10 52.5v135c0 17.9 14.6 32.5 32.5 32.5h113.2l-5.3-18.4 12.8 11.9 12.1 11.3L235 220V52.5c0-17.9-14.6-32.5-32.5-32.5zM162 167s-5.3-6.3-9.7-11.8c19.2-5.4 26.6-17.3 26.6-17.3-6 4-11.7 6.9-16.8 8.9-7.3 3.1-14.3 5.1-21.1 6.2-13.9 2.6-26.6 1.9-37.6-.1-8.3-1.6-15.4-3.9-21.4-6.2-3.4-1.3-7.1-3-10.9-5.1-.4-.2-.8-.3-1.2-.5-.3-.2-.5-.3-.8-.5-.2-.1-.3-.2-.4-.3-1.7-.9-2.6-1.6-2.6-1.6s7.1 11.8 25.9 17.2c-4.4 5.5-9.8 12-9.8 12-32.3-1-44.6-22.2-44.6-22.2 0-46.9 20.9-85 20.9-85 20.9-15.7 40.8-15.3 40.8-15.3l1.5 1.8c-26 7.5-37.9 18.9-37.9 18.9s3.2-1.8 8.6-4.4c15.6-6.9 28-8.7 33.1-9.2.8-.1 1.5-.2 2.3-.2 8.2-1.1 17.4-1.4 26.8-.3 12.7 1.5 26.4 5.3 40.3 13.1 0 0-11.4-10.9-35.9-18.4l2.1-2.4s19.9-.4 40.8 15.3c0 0 20.9 38.1 20.9 85 0 0-12.4 21.2-44.7 22.2z"/>
-        </svg>
+        <svg viewBox="0 0 245 240"><path d="M104.4 104.3c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1.1-6.1-4.5-11.1-10.2-11.1zm36.2 0c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1s-4.5-11.1-10.2-11.1z"/><path d="M189.5 20h-134C24.6 20 10 34.6 10 52.5v135c0 17.9 14.6 32.5 32.5 32.5h113.2l-5.3-18.4 12.8 11.9 12.1 11.3L235 220V52.5c0-17.9-14.6-32.5-32.5-32.5zM162 167s-5.3-6.3-9.7-11.8c19.2-5.4 26.6-17.3 26.6-17.3-6 4-11.7 6.9-16.8 8.9-7.3 3.1-14.3 5.1-21.1 6.2-13.9 2.6-26.6 1.9-37.6-.1-8.3-1.6-15.4-3.9-21.4-6.2-3.4-1.3-7.1-3-10.9-5.1-.4-.2-.8-.3-1.2-.5-.3-.2-.5-.3-.8-.5-.2-.1-.3-.2-.4-.3-1.7-.9-2.6-1.6-2.6-1.6s7.1 11.8 25.9 17.2c-4.4 5.5-9.8 12-9.8 12-32.3-1-44.6-22.2-44.6-22.2 0-46.9 20.9-85 20.9-85 20.9-15.7 40.8-15.3 40.8-15.3l1.5 1.8c-26 7.5-37.9 18.9-37.9 18.9s3.2-1.8 8.6-4.4c15.6-6.9 28-8.7 33.1-9.2.8-.1 1.5-.2 2.3-.2 8.2-1.1 17.4-1.4 26.8-.3 12.7 1.5 26.4 5.3 40.3 13.1 0 0-11.4-10.9-35.9-18.4l2.1-2.4s19.9-.4 40.8 15.3c0 0 20.9 38.1 20.9 85 0 0-12.4 21.2-44.7 22.2z"/></svg>
       </a>
-
       <!-- Twitch -->
       <a href="https://twitch.tv/OfficialDoughyYT" target="_blank" class="twitch" aria-label="Twitch">
-        <svg viewBox="0 0 2400 2800">
-          <path d="M500 0L100 400v2000h600v400h400l400-400h500l600-600V0H500zm1700 1400l-400 400h-500l-400 400v-400H600V200h1600v1200z"/>
-          <path d="M1700 550h200v600h-200V550zm-600 0h200v600h-200V550z"/>
-        </svg>
+        <svg viewBox="0 0 2400 2800"><path d="M500 0L100 400v2000h600v400h400l400-400h500l600-600V0H500zm1700 1400l-400 400h-500l-400 400v-400H600V200h1600v1200z"/><path d="M1700 550h200v600h-200V550zm-600 0h200v600h-200V550z"/></svg>
       </a>
     </div>
   </header>
@@ -107,5 +150,23 @@
     <source src="oh yeah ethan.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
+
+  <!-- Server Info Section -->
+  <div class="server-info">
+    <h2>Join The Server!</h2>
+    <span class="server-ip">play.doughymc.com</span>
+  </div>
+
+  <!-- Banner Image -->
+  <div class="server-banner">
+    <img src="image_2025-08-03_163236009.png" alt="Minecraft Server Screenshot">
+  </div>
+
+  <!-- Mods Section -->
+  <div class="mods-section">
+    <h2>Mods:</h2>
+    <a href="https://drive.google.com/file/d/1QJXP9Vll2_iVFQVwM6nY19ZphrLHyuM7/view?usp=sharing" target="_blank">All Mods Needed</a>
+    <a href="https://youtu.be/l5AW6Fb2Oyo?si=-ob5pQakvqlNOGeE&t=181" target="_blank">How to Install Mods</a>
+  </div>
 </body>
 </html>
