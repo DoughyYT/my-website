@@ -132,12 +132,16 @@
       text-decoration: underline;
     }
     #disqus_thread {
-      min-height: 400px;
-      background-color: white;
-      border: 1px solid black;
-      padding: 10px;
-      color: black;
-    }
+  min-height: 400px;
+  min-width: 300px;      /* ensures minimum horizontal space */
+  width: 90vw;           /* or use 90% to match other content */
+  max-width: 900px;      /* optional max-width for large screens */
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
+  color: black;
+  box-sizing: border-box; /* ensures padding/border inside width */
+}
   </style>
 </head>
 <body>
