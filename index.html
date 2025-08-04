@@ -10,21 +10,26 @@
       flex-direction: column;
       align-items: center;
       margin: 0;
+      padding-top: 140px; /* pushes content down so it's not hidden under header */
       background: linear-gradient(135deg, #ffffff, #007bff);
       font-family: Arial, Helvetica, sans-serif;
       color: white;
     }
 
     header {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 30px;
-      position: relative;
-      width: 100%;
-      padding: 10px 30px;
-      box-sizing: border-box;
-    }
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  position: fixed;       /* makes it stick */
+  top: 0;                /* sticks at top */
+  left: 0;
+  width: 100%;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #ffffff, #007bff); /* match page background */
+  z-index: 1000;         /* keeps it above everything else */
+}
 
     header img {
       height: 90px;
@@ -92,6 +97,8 @@
 
     .server-banner {
       margin-top: 20px;
+      display: flex;
+      justify-content: center;
     }
 
     .server-banner img {
