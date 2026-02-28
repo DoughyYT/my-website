@@ -94,6 +94,26 @@
       text-align: center;
     }
 
+    .bedrock-mods {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .bedrock-mods h3 {
+      font-size: 2em;
+      color: limegreen;
+      -webkit-text-stroke: 1px white;
+      margin-bottom: 15px;
+    }
+
+    .bedrock-mods select {
+      padding: 10px 20px;
+      font-size: 1.2em;
+      border-radius: 8px;
+      border: 2px solid white;
+      cursor: pointer;
+    }
+
     .section-divider {
       width: 70%;
       height: 4px;
@@ -216,6 +236,20 @@
 <div class="server-info">
   <h2>Join The Server!</h2>
   <div class="server-ip">smp.doughymc.com</div>
+</div>
+  
+  <div class="bedrock-mods">
+  <h3>Current Mods</h3>
+
+  <select onchange="if(this.value) window.open(this.value, '_blank')">
+    <option value="">Select a Mod</option>
+    <option value="https://www.curseforge.com/minecraft-bedrock/addons/durability-armor-viewer">Durability Armor Viewer</option>
+    <option value="https://www.curseforge.com/minecraft-bedrock/addons/system-dynamic-lights">System Dynamic Light</option>
+    <option value="https://www.curseforge.com/minecraft-bedrock/addons/raiyons-tree-capitator-addon">Tree Chopper</option>
+    <option value="https://www.curseforge.com/minecraft-bedrock/addons/simple-waystone">Simple Waystone</option>
+    <option value="https://www.curseforge.com/minecraft-bedrock/addons/true-backpack">True Backpack V2.8.1</option>
+    <option value="https://www.curseforge.com/minecraft-bedrock/addons/beyond-storage-smelting-by-gridveyn-studios">Beyond Storage & Smelting</option>
+  </select>
 </div>
 
 <!-- <div class="server-banner">
